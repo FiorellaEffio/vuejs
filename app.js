@@ -1,6 +1,8 @@
 new Vue({
   el:'#vue-app',
   data: {
+    x:0,
+    y:0,
     age:22,
     name: 'Fiorella',
     website: 'https://thenetninja.co.uk',
@@ -9,6 +11,17 @@ new Vue({
   methods: {
     greet: function(time) {
       return 'Good '+time+ this.name;
+    },
+    addYear: function(inc) {
+      this.age += inc;
+    },
+    subtractYear: function(dec) {
+      this.age -= dec;
+    },
+    updateXY: function(event) {
+      
+      this.x = event.offsetX;
+      this.y = event.offsetY;
     }
   }
 });
