@@ -11,9 +11,16 @@
       <h1> {{ greet('morning') }}</h1>
       <h1> {{ name }} </h1>
       <div id="data-binding">
+        <h1>Data-Binding</h1>
         <a v-bind:href="website">The net ninja</a>
         <input type="text" name="" v-bind:value="name">
         <p v-html="websiteTag"></p>
+      </div>
+      <div id="events">
+        <h1>Events</h1>
+        <p>My age is {{age}}</p>
+        <button v-on:click="age++">Add a year</button>
+        <button v-on:click="age--">Subtract a year</button>
       </div>
     </div>
 
