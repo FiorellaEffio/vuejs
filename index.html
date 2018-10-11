@@ -8,23 +8,28 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1> {{ greet('morning') }}</h1>
-      <h1> {{ name }} </h1>
-      <div id="data-binding">
-        <h1>Data-Binding</h1>
-        <a v-bind:href="website">The net ninja</a>
-        <input type="text" name="" v-bind:value="name">
-        <p v-html="websiteTag"></p>
+      <div class="last">
+        <h1> {{ greet('morning') }}</h1>
+        <h1> {{ name }} </h1>
+        <div id="data-binding">
+          <h1>Data-Binding</h1>
+          <a v-bind:href="website">The net ninja</a>
+          <input type="text" name="" v-bind:value="name">
+          <p v-html="websiteTag"></p>
+        </div>
+        <div id="events">
+          <h1>Events</h1>
+          <p>My age is {{age}}</p>
+          <button @click.once="addYear(1)">Add a year</button>
+          <button v-on:click="subtractYear(1)">Subtract a year</button>
+          <button @dblclick="addYear(10)">Add 10 years</button>
+          <button v-on:dblclick="subtractYear(10)">Subtract 10 years</button>
+          <canvas v-on:mousemove="updateXY" id="canvas"></canvas>
+          <p> {{ x }} , {{ y }} </p>
+        </div>
       </div>
-      <div id="events">
-        <h1>Events</h1>
-        <p>My age is {{age}}</p>
-        <button @click="addYear(1)">Add a year</button>
-        <button v-on:click="subtractYear(1)">Subtract a year</button>
-        <button @dblclick="addYear(10)">Add 10 years</button>
-        <button v-on:dblclick="subtractYear(10)">Subtract 10 years</button>
-        <canvas v-on:mousemove="updateXY" id="canvas"></canvas>
-        <p> {{ x }} , {{ y }} </p>
+      <div id="event-modifiers">
+        <a @click.prevent="click" href="https://www.google.com.pe">The net ninja prevent</a>
       </div>
     </div>
 
