@@ -30,15 +30,27 @@
         <div id="event-modifiers">
           <a @click.prevent="click" href="https://www.google.com.pe">The net ninja prevent</a>
         </div>
+        <div id="keyboard-events">
+          <h1>Keyboard Events</h1>
+          <label>Name:</label>
+          {{name}}
+          <input type="text" v-model="name">
+          <label>Age:</label>
+          {{age}}
+          <input type="text" v-model="age">
+        </div>
       </div>
-      <div id="keyboard-events">
-        <h1>Keyboard Events</h1>
-        <label>Name:</label>
-        {{name}}
-        <input type="text" v-model="name">
-        <label>Age:</label>
-        {{age}}
-        <input type="text" v-model="age">
+      <div id="dynamic-css">
+      <h1>Dynamic CSS</h1>
+      <h2>Example 1</h2>
+      <button v-on:click="available = !available">CLICK ME</button>
+      <div v-bind:class="{available: available}">
+        <span>Fiorella Effio</span>
+      </div>
+      <h2>Example 2</h2>
+      <div v-bind:class="{}">
+
+      </div>
       </div>
     </div>
 

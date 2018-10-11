@@ -6,7 +6,8 @@ new Vue({
     age:22,
     name: 'Fiorella',
     website: 'https://thenetninja.co.uk',
-    websiteTag: '<a href="https://thenetninja.co.uk">The net ninja TAG</a>'
+    websiteTag: '<a href="https://thenetninja.co.uk">The net ninja TAG</a>',
+    available: false
   },
   methods: {
     greet: function(time) {
@@ -32,5 +33,8 @@ new Vue({
     logAge: function(){
       console.log("you entered your age")
     }
+  },
+  computed: {
+
   }
 });
