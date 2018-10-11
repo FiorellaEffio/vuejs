@@ -27,9 +27,18 @@
           <canvas v-on:mousemove="updateXY" id="canvas"></canvas>
           <p> {{ x }} , {{ y }} </p>
         </div>
+        <div id="event-modifiers">
+          <a @click.prevent="click" href="https://www.google.com.pe">The net ninja prevent</a>
+        </div>
       </div>
-      <div id="event-modifiers">
-        <a @click.prevent="click" href="https://www.google.com.pe">The net ninja prevent</a>
+      <div id="keyboard-events">
+        <h1>Keyboard Events</h1>
+        <label>Name:</label>
+        {{name}}
+        <input type="text" v-model="name">
+        <label>Age:</label>
+        {{age}}
+        <input type="text" v-model="age">
       </div>
     </div>
 
