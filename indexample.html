@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VUEJS Examples</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <div class="last">
+        <h1> {{ greet('morning') }}</h1>
+        <h1> {{ name }} </h1>
+        <div id="data-binding">
+          <h1>Data-Binding</h1>
+          <a v-bind:href="website">The net ninja</a>
+          <input type="text" name="" v-bind:value="name">
+          <p v-html="websiteTag"></p>
+        </div>
+        <div id="events">
+          <h1>Events</h1>
+          <p>My age is {{age}}</p>
+          <button @click.once="addYear(1)">Add a year</button>
+          <button v-on:click="subtractYear(1)">Subtract a year</button>
+          <button @dblclick="addYear(10)">Add 10 years</button>
+          <button v-on:dblclick="subtractYear(10)">Subtract 10 years</button>
+          <canvas v-on:mousemove="updateXY" id="canvas"></canvas>
+          <p> {{ x }} , {{ y }} </p>
+        </div>
+        <div id="event-modifiers">
+          <a @click.prevent="click" href="https://www.google.com.pe">The net ninja prevent</a>
+        </div>
+        <div id="keyboard-events">
+          <h1>Keyboard Events</h1>
+          <label>Name:</label>
+          {{name}}
+          <input type="text" v-model="name">
+          <label>Age:</label>
+          {{age}}
+          <input type="text" v-model="age">
+        </div>
+      </div>
+      <div id="dynamic-css" class="last">
+        <h1>Dynamic CSS</h1>
+        <h2>Example 1</h2>
+        <button v-on:click="available = !available">CLICK ME</button>
+        <div v-bind:class="{available: available}">
+          <span>Fiorella Effio</span>
+        </div>
+        <h2>Example 2</h2>
+        <div v-bind:class="{}">
+
+        </div>
+      </div>
+      <div id="conditionals">
+        <button v-on:click="error = !error">Toggle Error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+        <!-- <p v-if="error">There has been an error</p>
+        <p v-else-if="success">Woooo!, success!!!!!!</p> -->
+        <p v-show="error">Hay un error</p>
+        <p v-show="success">Éxito!</p>
+
+      </div>
+    </div>
+
+  <script src="app.js"></script>
+  </body>
+</html>
