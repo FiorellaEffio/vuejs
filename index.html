@@ -40,17 +40,26 @@
           <input type="text" v-model="age">
         </div>
       </div>
-      <div id="dynamic-css">
-      <h1>Dynamic CSS</h1>
-      <h2>Example 1</h2>
-      <button v-on:click="available = !available">CLICK ME</button>
-      <div v-bind:class="{available: available}">
-        <span>Fiorella Effio</span>
-      </div>
-      <h2>Example 2</h2>
-      <div v-bind:class="{}">
+      <div id="dynamic-css" class="last">
+        <h1>Dynamic CSS</h1>
+        <h2>Example 1</h2>
+        <button v-on:click="available = !available">CLICK ME</button>
+        <div v-bind:class="{available: available}">
+          <span>Fiorella Effio</span>
+        </div>
+        <h2>Example 2</h2>
+        <div v-bind:class="{}">
 
+        </div>
       </div>
+      <div id="conditionals">
+        <button v-on:click="error = !error">Toggle Error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+        <!-- <p v-if="error">There has been an error</p>
+        <p v-else-if="success">Woooo!, success!!!!!!</p> -->
+        <p v-show="error">Hay un error</p>
+        <p v-show="success">Éxito!</p>
+
       </div>
     </div>
 

@@ -7,7 +7,9 @@ new Vue({
     name: 'Fiorella',
     website: 'https://thenetninja.co.uk',
     websiteTag: '<a href="https://thenetninja.co.uk">The net ninja TAG</a>',
-    available: false
+    available: false,
+    error: false,
+    success: false
   },
   methods: {
     greet: function(time) {
